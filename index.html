@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prashansa Media Mint</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+    body { background: #fff; color: #000; }
+    header {
+      background: linear-gradient(90deg, #ebebec, #424242);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+      position: relative;
+    }
+    header img.logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: auto;
+      background-color: #fff;
+      padding: 5px;
+      border-radius: 8px;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; }
+    .button { background: #fff; color: #2563eb; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; margin-top: 20px; }
+    .services, .contact, .about { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: #1f2937; }
+    .about { background-color: #f1f5f9; text-align: center; }
+    .about h2, .contact h2 { font-size: 2rem; margin-bottom: 20px; }
+    .about p { max-width: 800px; margin: auto; font-size: 1rem; line-height: 1.6; }
+    form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto; }
+    input, textarea { padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 1rem; }
+    footer { background: #1f2937; color: #fff; text-align: center; padding: 20px; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Mediamint.jpg" alt="Company Logo" class="logo" />
+    <h1>Prashansa Media Mint</h1>
+    <p>Empowering Brands Through Creativity & Digital Innovation</p>
+    <button class="button">Get in Touch</button>
+  </header>
+
+  <section class="services">
+    <h2 style="text-align: center; margin-bottom: 30px; font-size: 2rem;">Our Services</h2>
+    <div class="services-grid">
+      <div class="card"><h3>Social Media Posts</h3><p>Engaging creatives for all platforms.</p></div>
+      <div class="card"><h3>Banner & Graphic Designing</h3><p>High-impact banners and promotional designs.</p></div>
+      <div class="card"><h3>Logo Designing</h3><p>Memorable and unique brand identity creation.</p></div>
+      <div class="card"><h3>Video Editing</h3><p>Professional editing for reels, ads, and more.</p></div>
+      <div class="card"><h3>Email Marketing</h3><p>Conversion-focused email campaigns.</p></div>
+      <div class="card"><h3>SEO</h3><p>Boost your website visibility on search engines.</p></div>
+      <div class="card"><h3>YouTube Marketing</h3><p>Grow your channel with strategic promotions.</p></div>
+      <div class="card"><h3>Digital Artwork</h3><p>Custom illustrations and artistic visuals.</p></div>
+      <div class="card"><h3>Website Development</h3><p>Modern, responsive websites built to perform.</p></div>
+      <div class="card"><h3>Mobile App Development</h3><p>Apps for iOS and Android tailored to your needs.</p></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Why Choose Us?</h2>
+    <p>
+      At Prashansa Media Mint, we blend creativity, strategy, and technology to elevate your brand's digital presence.
+      From startups to enterprises, we deliver compelling digital experiences that convert and inspire.
+    </p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="button">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Prashansa Media Mint. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Message sent! We will get back to you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
